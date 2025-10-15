@@ -1,0 +1,22 @@
+# SentraFIM config (TOML)
+baseline_db = "baseline.db"
+metrics_bind = "127.0.0.1:9977"
+
+watch_paths = [
+  # Примеры (замени на свои пути):
+  "C:/Users/YourUser/Documents",
+  "/var/www/app",
+]
+
+exclude = [
+  "**/.git/**",
+  "**/node_modules/**",
+  "**/*.log",
+  "**/target/**",
+]
+
+# Алгоритм хеширования: "blake3" (по умолчанию) или "sha256"
+hash_alg = "blake3"
+
+# Дебаунс событий файловой системы, мс
+debounce_ms = 250
